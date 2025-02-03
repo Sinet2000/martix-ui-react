@@ -1,12 +1,9 @@
-import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+const { BASE_URL } = import.meta.env;
 
-  return (
-    <>
-    </>
-  )
-}
+const App = () => {
+  return <BrowserRouter basename={BASE_URL}></BrowserRouter>;
+};
 
-export default App
+export { App };
